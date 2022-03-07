@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project source="3.4.3-61c.7ae7f66" version="1.0">
+<project source="3.3.6" version="1.0">
   This file is intended to be loaded by Logisim-evolution (https://github.com/reds-heig/logisim-evolution).
 
   <lib desc="#Wiring" name="0">
@@ -88,14 +88,49 @@
     <comp lib="0" loc="(220,80)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="INPUT0"/>
-      <a name="locked" val="true"/>
       <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(290,160)" name="Splitter">
+      <a name="appear" val="center"/>
+      <a name="bit2" val="1"/>
+      <a name="bit3" val="1"/>
+      <a name="bit4" val="1"/>
+      <a name="bit5" val="1"/>
+      <a name="bit6" val="1"/>
+      <a name="bit7" val="2"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="8"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(290,80)" name="Splitter">
+      <a name="appear" val="center"/>
+      <a name="bit2" val="1"/>
+      <a name="bit3" val="1"/>
+      <a name="bit4" val="1"/>
+      <a name="bit5" val="1"/>
+      <a name="bit6" val="1"/>
+      <a name="bit7" val="2"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="8"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(420,160)" name="Splitter">
+      <a name="appear" val="center"/>
+      <a name="bit2" val="1"/>
+      <a name="bit3" val="1"/>
+      <a name="bit4" val="1"/>
+      <a name="bit5" val="1"/>
+      <a name="bit6" val="1"/>
+      <a name="bit7" val="2"/>
+      <a name="facing" val="west"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="8"/>
+      <a name="spacing" val="2"/>
     </comp>
     <comp lib="0" loc="(690,160)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="OUTPUT1"/>
-      <a name="locked" val="true"/>
       <a name="output" val="true"/>
       <a name="width" val="8"/>
     </comp>
@@ -103,8 +138,23 @@
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="OUTPUT0"/>
-      <a name="locked" val="true"/>
       <a name="output" val="true"/>
     </comp>
+    <comp lib="1" loc="(370,180)" name="NOT Gate"/>
+    <comp lib="1" loc="(510,80)" name="AND Gate"/>
+    <wire from="(220,160)" to="(290,160)"/>
+    <wire from="(220,80)" to="(220,160)"/>
+    <wire from="(220,80)" to="(290,80)"/>
+    <wire from="(310,100)" to="(460,100)"/>
+    <wire from="(310,140)" to="(400,140)"/>
+    <wire from="(310,160)" to="(400,160)"/>
+    <wire from="(310,180)" to="(340,180)"/>
+    <wire from="(310,60)" to="(460,60)"/>
+    <wire from="(370,180)" to="(400,180)"/>
+    <wire from="(420,160)" to="(690,160)"/>
+    <wire from="(510,80)" to="(690,80)"/>
   </circuit>
 </project>
+<!--Mon Mar  7 21:35:46 2022-->
+<!--/home/kraken/ABC/lab01-->
+<!--kraken-->

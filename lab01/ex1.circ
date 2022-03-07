@@ -313,8 +313,10 @@
       <a name="appearance" val="NewPins"/>
       <a name="label" val="A"/>
     </comp>
-    <comp lib="1" loc="(130,230)" name="NOT Gate"/>
-    <comp lib="1" loc="(130,270)" name="NOT Gate"/>
+    <comp lib="1" loc="(530,100)" name="NOT Gate"/>
+    <comp lib="1" loc="(530,180)" name="NOT Gate"/>
+    <comp lib="1" loc="(530,40)" name="NOT Gate"/>
+    <comp lib="1" loc="(530,60)" name="NOT Gate"/>
     <comp lib="1" loc="(600,100)" name="AND Gate">
       <a name="inputs" val="3"/>
     </comp>
@@ -330,33 +332,26 @@
     <comp lib="1" loc="(680,130)" name="OR Gate">
       <a name="inputs" val="4"/>
     </comp>
-    <wire from="(100,140)" to="(100,150)"/>
-    <wire from="(100,140)" to="(550,140)"/>
-    <wire from="(100,190)" to="(100,200)"/>
-    <wire from="(100,20)" to="(100,70)"/>
-    <wire from="(100,20)" to="(550,20)"/>
-    <wire from="(100,200)" to="(550,200)"/>
-    <wire from="(100,80)" to="(100,110)"/>
-    <wire from="(100,80)" to="(550,80)"/>
-    <wire from="(130,230)" to="(140,230)"/>
-    <wire from="(130,270)" to="(510,270)"/>
-    <wire from="(140,220)" to="(140,230)"/>
-    <wire from="(140,220)" to="(530,220)"/>
-    <wire from="(510,120)" to="(510,180)"/>
-    <wire from="(510,120)" to="(550,120)"/>
-    <wire from="(510,180)" to="(510,240)"/>
-    <wire from="(510,180)" to="(550,180)"/>
-    <wire from="(510,240)" to="(510,270)"/>
-    <wire from="(510,240)" to="(550,240)"/>
-    <wire from="(510,60)" to="(510,120)"/>
-    <wire from="(510,60)" to="(550,60)"/>
-    <wire from="(530,100)" to="(530,160)"/>
+    <wire from="(160,100)" to="(160,160)"/>
+    <wire from="(160,100)" to="(500,100)"/>
+    <wire from="(160,160)" to="(160,220)"/>
+    <wire from="(160,160)" to="(550,160)"/>
+    <wire from="(160,220)" to="(160,270)"/>
+    <wire from="(160,220)" to="(550,220)"/>
+    <wire from="(160,40)" to="(160,100)"/>
+    <wire from="(160,40)" to="(500,40)"/>
+    <wire from="(200,120)" to="(200,180)"/>
+    <wire from="(200,120)" to="(550,120)"/>
+    <wire from="(200,180)" to="(200,230)"/>
+    <wire from="(200,180)" to="(500,180)"/>
+    <wire from="(200,230)" to="(200,240)"/>
+    <wire from="(200,240)" to="(550,240)"/>
+    <wire from="(200,60)" to="(200,120)"/>
+    <wire from="(200,60)" to="(500,60)"/>
     <wire from="(530,100)" to="(550,100)"/>
-    <wire from="(530,160)" to="(530,220)"/>
-    <wire from="(530,160)" to="(550,160)"/>
-    <wire from="(530,220)" to="(550,220)"/>
-    <wire from="(530,40)" to="(530,100)"/>
+    <wire from="(530,180)" to="(550,180)"/>
     <wire from="(530,40)" to="(550,40)"/>
+    <wire from="(530,60)" to="(550,60)"/>
     <wire from="(600,100)" to="(610,100)"/>
     <wire from="(600,160)" to="(610,160)"/>
     <wire from="(600,220)" to="(620,220)"/>
@@ -370,11 +365,36 @@
     <wire from="(620,150)" to="(630,150)"/>
     <wire from="(620,40)" to="(620,110)"/>
     <wire from="(680,130)" to="(690,130)"/>
-    <wire from="(90,110)" to="(100,110)"/>
-    <wire from="(90,150)" to="(100,150)"/>
-    <wire from="(90,190)" to="(100,190)"/>
-    <wire from="(90,230)" to="(100,230)"/>
-    <wire from="(90,270)" to="(100,270)"/>
-    <wire from="(90,70)" to="(100,70)"/>
+    <wire from="(90,140)" to="(550,140)"/>
+    <wire from="(90,140)" to="(90,150)"/>
+    <wire from="(90,190)" to="(90,200)"/>
+    <wire from="(90,20)" to="(550,20)"/>
+    <wire from="(90,20)" to="(90,70)"/>
+    <wire from="(90,200)" to="(550,200)"/>
+    <wire from="(90,230)" to="(200,230)"/>
+    <wire from="(90,270)" to="(160,270)"/>
+    <wire from="(90,80)" to="(550,80)"/>
+    <wire from="(90,80)" to="(90,110)"/>
   </circuit>
 </project>
+<!--Mon Mar  7 19:36:32 2022-->
+<!--/home/kraken/ABC/lab01-->
+<!--kraken-->
+<!--Mon Mar  7 20:59:59 2022-->
+<!--/home/kraken/ABC/lab01-->
+<!--kraken-->
+<!--Mon Mar  7 21:13:41 2022-->
+<!--/home/kraken/ABC/lab01-->
+<!--kraken-->
+<!--Mon Mar  7 21:15:07 2022-->
+<!--/home/kraken/ABC/lab01-->
+<!--kraken-->
+<!--Mon Mar  7 21:16:11 2022-->
+<!--/home/kraken/ABC/lab01-->
+<!--kraken-->
+<!--Mon Mar  7 21:18:27 2022-->
+<!--/home/kraken/ABC/lab01-->
+<!--kraken-->
+<!--Mon Mar  7 21:35:44 2022-->
+<!--/home/kraken/ABC/lab01-->
+<!--kraken-->

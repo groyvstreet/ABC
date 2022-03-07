@@ -5,7 +5,6 @@
   <lib desc="#Wiring" name="0">
     <tool name="Splitter">
       <a name="appear" val="center"/>
-      <a name="facing" val="west"/>
     </tool>
     <tool name="Pin">
       <a name="facing" val="north"/>
@@ -32,8 +31,16 @@
       <a name="table" val=""/>
     </tool>
   </lib>
-  <lib desc="#Arithmetic" name="2"/>
-  <lib desc="#Memory" name="3">
+  <lib desc="#Plexers" name="2">
+    <tool name="Multiplexer">
+      <a name="enable" val="false"/>
+    </tool>
+    <tool name="Demultiplexer">
+      <a name="enable" val="false"/>
+    </tool>
+  </lib>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4">
     <tool name="D Flip-Flop">
       <a name="appearance" val="logisim_evolution"/>
     </tool>
@@ -68,7 +75,28 @@
 </a>
     </tool>
   </lib>
-  <lib desc="#Base" name="4">
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#TTL" name="6"/>
+  <lib desc="#TCL" name="7">
+    <tool name="TclGeneric">
+      <a name="content">library ieee;
+use ieee.std_logic_1164.all;
+
+entity TCL_Generic is
+  port(
+    --Insert input ports below
+    horloge_i  : in  std_logic;                    -- input bit example
+    val_i      : in  std_logic_vector(3 downto 0); -- input vector example
+
+	  --Insert output ports below
+    max_o      : out std_logic;                    -- output bit example
+    cpt_o      : out std_logic_Vector(3 downto 0)  -- output vector example
+  );
+end TCL_Generic;
+</a>
+    </tool>
+  </lib>
+  <lib desc="#Base" name="8">
     <tool name="Text Tool">
       <a name="font" val="SansSerif plain 12"/>
       <a name="halign" val="center"/>
@@ -76,22 +104,47 @@
       <a name="valign" val="base"/>
     </tool>
   </lib>
-  <main name="AddMachine"/>
+  <lib desc="#BFH-Praktika" name="9"/>
+  <lib desc="#Input/Output-Extra" name="10"/>
+  <lib desc="#Soc" name="11">
+    <tool name="Rv32im">
+      <a name="SocBusSelection" val=""/>
+    </tool>
+    <tool name="Nios2">
+      <a name="SocBusSelection" val=""/>
+    </tool>
+    <tool name="SocBus">
+      <a name="SocBusIdentifier" val="0x0000017F6579A5434a1f3b5e"/>
+    </tool>
+    <tool name="Socmem">
+      <a name="SocBusSelection" val=""/>
+    </tool>
+    <tool name="SocPio">
+      <a name="SocBusSelection" val=""/>
+    </tool>
+    <tool name="SocVga">
+      <a name="SocBusSelection" val=""/>
+    </tool>
+    <tool name="SocJtagUart">
+      <a name="SocBusSelection" val=""/>
+    </tool>
+  </lib>
+  <main name="RotLeft"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
     <a name="simrand" val="0"/>
   </options>
   <mappings>
-    <tool lib="4" map="Button2" name="Menu Tool"/>
-    <tool lib="4" map="Button3" name="Menu Tool"/>
-    <tool lib="4" map="Ctrl Button1" name="Menu Tool"/>
+    <tool lib="8" map="Button2" name="Menu Tool"/>
+    <tool lib="8" map="Button3" name="Menu Tool"/>
+    <tool lib="8" map="Ctrl Button1" name="Menu Tool"/>
   </mappings>
   <toolbar>
-    <tool lib="4" name="Poke Tool"/>
-    <tool lib="4" name="Edit Tool"/>
-    <tool lib="4" name="Wiring Tool"/>
-    <tool lib="4" name="Text Tool">
+    <tool lib="8" name="Poke Tool"/>
+    <tool lib="8" name="Edit Tool"/>
+    <tool lib="8" name="Wiring Tool"/>
+    <tool lib="8" name="Text Tool">
       <a name="font" val="SansSerif plain 12"/>
       <a name="halign" val="center"/>
       <a name="text" val=""/>
@@ -113,73 +166,32 @@
     <tool lib="1" name="XOR Gate"/>
     <tool lib="1" name="NAND Gate"/>
     <tool lib="1" name="NOR Gate"/>
+    <sep/>
+    <tool lib="4" name="D Flip-Flop">
+      <a name="appearance" val="logisim_evolution"/>
+    </tool>
+    <tool lib="4" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </tool>
   </toolbar>
-  <circuit name="AddMachine">
+  <circuit name="RotLeft">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="AddMachine"/>
+    <a name="circuit" val="RotLeft"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="circuitvhdlpath" val=""/>
     <a name="clabel" val=""/>
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="clabelup" val="east"/>
-    <comp lib="0" loc="(100,210)" name="Pin">
+    <comp lib="0" loc="(160,20)" name="Pin">
       <a name="appearance" val="NewPins"/>
-      <a name="label" val="clk"/>
+      <a name="label" val="INPUT0"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="16"/>
     </comp>
-    <comp lib="0" loc="(140,110)" name="Constant">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(480,180)" name="Pin">
+    <comp lib="0" loc="(160,60)" name="Pin">
       <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="ADD_OUT"/>
-      <a name="output" val="true"/>
-      <a name="width" val="8"/>
+      <a name="label" val="AMOUNT"/>
+      <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(480,240)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="REG_OUT"/>
-      <a name="output" val="true"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="2" loc="(200,120)" name="Adder"/>
-    <comp lib="3" loc="(260,140)" name="Register">
-      <a name="appearance" val="logisim_evolution"/>
-    </comp>
-    <wire from="(100,210)" to="(260,210)"/>
-    <wire from="(140,110)" to="(160,110)"/>
-    <wire from="(140,130)" to="(140,260)"/>
-    <wire from="(140,130)" to="(160,130)"/>
-    <wire from="(140,260)" to="(360,260)"/>
-    <wire from="(200,120)" to="(230,120)"/>
-    <wire from="(230,120)" to="(230,170)"/>
-    <wire from="(230,120)" to="(440,120)"/>
-    <wire from="(230,170)" to="(260,170)"/>
-    <wire from="(320,170)" to="(360,170)"/>
-    <wire from="(360,170)" to="(360,260)"/>
-    <wire from="(360,170)" to="(400,170)"/>
-    <wire from="(400,170)" to="(400,240)"/>
-    <wire from="(400,240)" to="(480,240)"/>
-    <wire from="(440,120)" to="(440,180)"/>
-    <wire from="(440,180)" to="(480,180)"/>
   </circuit>
 </project>
-<!--Mon Mar  7 21:00:00 2022-->
-<!--/home/kraken/ABC/lab01-->
-<!--kraken-->
-<!--Mon Mar  7 21:13:42 2022-->
-<!--/home/kraken/ABC/lab01-->
-<!--kraken-->
-<!--Mon Mar  7 21:15:08 2022-->
-<!--/home/kraken/ABC/lab01-->
-<!--kraken-->
-<!--Mon Mar  7 21:16:12 2022-->
-<!--/home/kraken/ABC/lab01-->
-<!--kraken-->
-<!--Mon Mar  7 21:18:28 2022-->
-<!--/home/kraken/ABC/lab01-->
-<!--kraken-->
-<!--Mon Mar  7 21:35:45 2022-->
-<!--/home/kraken/ABC/lab01-->
-<!--kraken-->
