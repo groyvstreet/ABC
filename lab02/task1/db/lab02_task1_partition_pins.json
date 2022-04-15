@@ -1,0 +1,49 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "la",
+					"strict" : false
+				},
+				{
+					"name" : "lb",
+					"strict" : false
+				},
+				{
+					"name" : "lc",
+					"strict" : false
+				},
+				{
+					"name" : "ra",
+					"strict" : false
+				},
+				{
+					"name" : "rb",
+					"strict" : false
+				},
+				{
+					"name" : "rc",
+					"strict" : false
+				},
+				{
+					"name" : "left",
+					"strict" : false
+				},
+				{
+					"name" : "right",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

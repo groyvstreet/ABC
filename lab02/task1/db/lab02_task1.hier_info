@@ -1,0 +1,21 @@
+|lab02_task1
+clk => q[0].CLK
+clk => q[1].CLK
+clk => q[2].CLK
+clk => q[3].CLK
+reset => q[0].ACLR
+reset => q[1].ACLR
+reset => q[2].ACLR
+reset => q[3].ACLR
+left => q_next.IN0
+left => q_next.IN0
+right => q_next.IN1
+right => q_next.IN1
+la <= la.DB_MAX_OUTPUT_PORT_TYPE
+lb <= lb.DB_MAX_OUTPUT_PORT_TYPE
+lc <= lc.DB_MAX_OUTPUT_PORT_TYPE
+ra <= ra.DB_MAX_OUTPUT_PORT_TYPE
+rb <= rb.DB_MAX_OUTPUT_PORT_TYPE
+rc <= rc.DB_MAX_OUTPUT_PORT_TYPE
+
+
