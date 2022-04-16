@@ -1,0 +1,21 @@
+module sword(input logic clk,
+				 input logic reset,
+				 input logic [3:0] room,
+				 output logic sword);
+		
+	typedef enum logic [1:0] {SW0, SW1} sword_state;
+	sword_state current, next;
+	
+	always_ff @(posedge clk, posedge reset)
+		if(reset) current <= SW0;
+		else current <= next;
+		
+	always_comb
+		case (current)
+			SW0: if (room === 4'b0110) next = SW1;
+				  else next = SW0;
+			SW1: next = SW1;
+		endcase
+		
+	assign sword = (current == SW1);
+endmodule

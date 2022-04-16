@@ -1,15 +1,15 @@
-D:/ABC/ABC/lab02/task1/testbench.sv {1 {vlog -work work -vopt -sv -stats=none D:/ABC/ABC/lab02/task1/testbench.sv
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module testbench
-
-Top level modules:
-	testbench
-
-} {} {}} D:/ABC/ABC/lab02/task1/lab02_task1.sv {1 {vlog -work work -vopt -sv -stats=none D:/ABC/ABC/lab02/task1/lab02_task1.sv
+D:/ABC/ABC/lab02/task1/lab02_task1.sv {1 {vlog -work work -vopt -sv -stats=none D:/ABC/ABC/lab02/task1/lab02_task1.sv
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module lab02_task1
 
 Top level modules:
 	lab02_task1
+
+} {} {}} D:/ABC/ABC/lab02/task1/testbench.sv {1 {vlog -work work -vopt -sv -stats=none D:/ABC/ABC/lab02/task1/testbench.sv
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module testbench
+
+Top level modules:
+	testbench
 
 } {} {}}

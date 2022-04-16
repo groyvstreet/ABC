@@ -1,0 +1,22 @@
+module shield(input logic clk,
+				 input logic reset,
+				 input logic [3:0] room,
+				 input logic gold,
+				 output logic sword);
+		
+	typedef enum logic [1:0] {SW0, SW1} shield_state;
+	shield_state current, next;
+	
+	always_ff @(posedge clk, posedge reset)
+		if(reset) current <= SH0;
+		else current <= next;
+		
+	always_comb
+		case (current)
+			SH0: if (room === 4'b0111 && gold) next = SH1;
+				  else next = SH0;
+			SH1: next = SH1;
+		endcase
+		
+	assign shield = (current == SH1);
+endmodule

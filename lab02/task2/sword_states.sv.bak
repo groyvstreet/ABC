@@ -1,0 +1,8 @@
+`ifndef SWORD_STATES
+`define SWORD_STATES
+
+package rooms;
+	typedef enum logic [1:0] {SW0, SW1} sword_state;
+endpackage
+
+`endif

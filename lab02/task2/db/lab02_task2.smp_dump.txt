@@ -1,0 +1,33 @@
+
+State Machine - |lab02_task2|amulet_state_machine:a|current
+Name current.A1 
+current.A0 0 
+current.A1 1 
+
+State Machine - |lab02_task2|shield_state_machine:sh|current
+Name current.SH1 
+current.SH0 0 
+current.SH1 1 
+
+State Machine - |lab02_task2|gold_state_machine:g|current
+Name current.G1 
+current.G0 0 
+current.G1 1 
+
+State Machine - |lab02_task2|sword_state_machine:sw|current
+Name current.SW1 
+current.SW0 0 
+current.SW1 1 
+
+State Machine - |lab02_task2|room_state_machine:r|current
+Name current.R10 current.R9 current.R8 current.R7 current.R6 current.R5 current.R4 current.R3 current.R2 current.R1 
+current.R1 0 0 0 0 0 0 0 0 0 0 
+current.R2 0 0 0 0 0 0 0 0 1 1 
+current.R3 0 0 0 0 0 0 0 1 0 1 
+current.R4 0 0 0 0 0 0 1 0 0 1 
+current.R5 0 0 0 0 0 1 0 0 0 1 
+current.R6 0 0 0 0 1 0 0 0 0 1 
+current.R7 0 0 0 1 0 0 0 0 0 1 
+current.R8 0 0 1 0 0 0 0 0 0 1 
+current.R9 0 1 0 0 0 0 0 0 0 1 
+current.R10 1 0 0 0 0 0 0 0 0 1 

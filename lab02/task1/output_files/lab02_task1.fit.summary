@@ -1,4 +1,4 @@
-Fitter Status : Successful - Thu Apr 14 21:06:24 2022
+Fitter Status : Successful - Sat Apr 16 13:38:02 2022
 Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 Revision Name : lab02_task1
 Top-level Entity Name : lab02_task1
@@ -6,7 +6,7 @@ Family : Cyclone V
 Device : 5CEBA4F23C7
 Timing Models : Final
 Logic utilization (in ALMs) : 7 / 18,480 ( < 1 % )
-Total registers : 4
+Total registers : 5
 Total pins : 10 / 224 ( 4 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 3,153,920 ( 0 % )

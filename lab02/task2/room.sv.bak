@@ -1,0 +1,39 @@
+module room(input logic clk,
+				input logic reset,
+				input logic n, s, e, w
+				input logic sword, gold, shield, amulet
+				output logic win, die);
+		
+	typedef enum logic {R1, R2, R3, R4, R5, R6, R7, R8, R9, R10} room;
+	room current, next;
+	
+	always_ff @(posedge clk,
+					posedge reset)
+		if (reset) current <= 'b0;
+		else current <= next;
+		
+	always_comb 
+		case (current)
+			R1: if (n) next = R2;
+				 else if (e) next = R3;
+				 else next = R1;
+			R2: if (s) next = R1;
+				 else next = R2;
+			R3: if (n) next = R4;
+				 else if (w) next = R1;
+				 else if (s) next = R5;
+				 else next = R3;
+			R4: if (s) next = R3;
+				 else next = R4;
+			R5: if (w) next = R6;
+				 else if (n) next = R3;
+				 else if (s) next = R7;
+				 else if (e) next = R8;
+				 else next = R5;
+			R6: if (e) next = R5;
+				 else next = R6;
+			R7: if (n) next = R5;
+				 else next = R7;
+			R8: if (
+		endcase
+endmodule

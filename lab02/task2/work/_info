@@ -1,0 +1,455 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/ABC/ABC/lab02/task1
+vamulet_state_machine
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 DXx4 work 5 rooms 0 22 fU[T0>_f@J5V_zj`:lRWa0
+Z2 DXx4 work 13 amulet_states 0 22 Q[Roam6>ZFOlDk]n^]UN00
+DXx4 work 14 amulet_sv_unit 0 22 HWoFfl[9_N]<oS0;f@GUC0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 U0_0<X`C7e?PKJ9ZlZk6>3
+IdLoWR;Z^7B>CjFAI_gZU81
+!s105 amulet_sv_unit
+S1
+Z4 dD:/ABC/ABC/lab02/task2
+Z5 w1650101507
+Z6 8D:/ABC/ABC/lab02/task2/amulet.sv
+Z7 FD:/ABC/ABC/lab02/task2/amulet.sv
+L0 7
+Z8 OL;L;10.6d;65
+Z9 !s108 1650104914.000000
+Z10 !s107 amulet_states.sv|rooms.sv|D:/ABC/ABC/lab02/task2/amulet.sv|
+Z11 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/ABC/ABC/lab02/task2/amulet.sv|
+!i113 0
+Z12 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z13 tCvgOpt 0
+Xamulet_states
+R0
+VQ[Roam6>ZFOlDk]n^]UN00
+r1
+!s85 0
+31
+!i10b 1
+!s100 3c9;6V5J^eUXKEaQD0Gzi0
+IQ[Roam6>ZFOlDk]n^]UN00
+S1
+R4
+w1650037415
+8amulet_states.sv
+Z14 Famulet_states.sv
+L0 4
+R8
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Xamulet_sv_unit
+R0
+R1
+R2
+VHWoFfl[9_N]<oS0;f@GUC0
+r1
+!s85 0
+31
+!i10b 1
+!s100 NM9He8cS^j`>YR<T@mBh=1
+IHWoFfl[9_N]<oS0;f@GUC0
+!i103 1
+S1
+R4
+R5
+R6
+R7
+Z15 Frooms.sv
+R14
+L0 4
+R8
+R9
+R10
+R11
+!i113 0
+R12
+R13
+vgold_state_machine
+R0
+R1
+Z16 DXx4 work 11 gold_states 0 22 o?:JG0UJB@:2JhCoMh_Q`1
+DXx4 work 12 gold_sv_unit 0 22 8?XLKF9miFz?c<eQR`YAG1
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 S4fb0f;d7>[@S:`_:jWBe3
+IHkfC@mYa95bHm<;@Uof811
+!s105 gold_sv_unit
+S1
+R4
+Z17 w1650101514
+Z18 8D:/ABC/ABC/lab02/task2/gold.sv
+Z19 FD:/ABC/ABC/lab02/task2/gold.sv
+L0 7
+R8
+R9
+Z20 !s107 gold_states.sv|rooms.sv|D:/ABC/ABC/lab02/task2/gold.sv|
+Z21 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/ABC/ABC/lab02/task2/gold.sv|
+!i113 0
+R12
+R13
+Xgold_states
+R0
+Vo?:JG0UJB@:2JhCoMh_Q`1
+r1
+!s85 0
+31
+!i10b 1
+!s100 Wf4OMe4U@ZNO@EP>ASR:43
+Io?:JG0UJB@:2JhCoMh_Q`1
+S1
+R4
+w1650037352
+8gold_states.sv
+Z22 Fgold_states.sv
+L0 4
+R8
+R9
+R20
+R21
+!i113 0
+R12
+R13
+Xgold_sv_unit
+R0
+R1
+R16
+V8?XLKF9miFz?c<eQR`YAG1
+r1
+!s85 0
+31
+!i10b 1
+!s100 D4gJNDZE7:6Z]GHGRbWz]0
+I8?XLKF9miFz?c<eQR`YAG1
+!i103 1
+S1
+R4
+R17
+R18
+R19
+R15
+R22
+L0 4
+R8
+R9
+R20
+R21
+!i113 0
+R12
+R13
+vlab02_task2
+R0
+R1
+DXx4 work 19 lab02_task2_sv_unit 0 22 M7^ID2Zc1Sz8?C]HoAGH?0
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 JA:71B>RcUngj@E>?037[3
+I9e2>_Qm6?UJl3?=NCX1f81
+!s105 lab02_task2_sv_unit
+S1
+R4
+Z23 w1650046239
+Z24 8D:/ABC/ABC/lab02/task2/lab02_task2.sv
+Z25 FD:/ABC/ABC/lab02/task2/lab02_task2.sv
+L0 4
+R8
+R9
+Z26 !s107 rooms.sv|D:/ABC/ABC/lab02/task2/lab02_task2.sv|
+Z27 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/ABC/ABC/lab02/task2/lab02_task2.sv|
+!i113 0
+R12
+R13
+Xlab02_task2_sv_unit
+R0
+R1
+VM7^ID2Zc1Sz8?C]HoAGH?0
+r1
+!s85 0
+31
+!i10b 1
+!s100 l6j?QTjdmab[ZY7LNHV9j3
+IM7^ID2Zc1Sz8?C]HoAGH?0
+!i103 1
+S1
+R4
+R23
+R24
+R25
+R15
+L0 2
+R8
+R9
+R26
+R27
+!i113 0
+R12
+R13
+vroom_state_machine
+R0
+R1
+DXx4 work 12 room_sv_unit 0 22 gE:@]R1;2le=DBl=XjU562
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 ];77zScWYocf]R2A>=IVL3
+IGcaF3FU3FC>KJMFRKM7TF1
+!s105 room_sv_unit
+S1
+R4
+Z28 w1650102226
+Z29 8D:/ABC/ABC/lab02/task2/room.sv
+Z30 FD:/ABC/ABC/lab02/task2/room.sv
+L0 4
+R8
+R9
+Z31 !s107 rooms.sv|D:/ABC/ABC/lab02/task2/room.sv|
+Z32 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/ABC/ABC/lab02/task2/room.sv|
+!i113 0
+R12
+R13
+Xroom_sv_unit
+R0
+R1
+VgE:@]R1;2le=DBl=XjU562
+r1
+!s85 0
+31
+!i10b 1
+!s100 B<6;4eWh0C9m>k@7ePH:f2
+IgE:@]R1;2le=DBl=XjU562
+!i103 1
+S1
+R4
+R28
+R29
+R30
+R15
+L0 2
+R8
+R9
+R31
+R32
+!i113 0
+R12
+R13
+Xrooms
+R0
+VfU[T0>_f@J5V_zj`:lRWa0
+r1
+!s85 0
+31
+!i10b 1
+!s100 =7CLQz[cChI9co7ASUW]80
+IfU[T0>_f@J5V_zj`:lRWa0
+S1
+R4
+w1650045296
+8rooms.sv
+R15
+L0 4
+R8
+R9
+Z33 !s107 sword_states.sv|rooms.sv|D:/ABC/ABC/lab02/task2/sword.sv|
+Z34 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/ABC/ABC/lab02/task2/sword.sv|
+!i113 0
+R12
+R13
+vshield_state_machine
+R0
+R1
+Z35 DXx4 work 13 shield_states 0 22 @T0@OJ>:DFJ0b6Kn@12Yo1
+DXx4 work 14 shield_sv_unit 0 22 b6eZGF[_02Oj0XkX44;Ua0
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 b=jAM3@R2b5LSS]4L;g6`3
+IB88M1WO3Po?Q?A`5:HL<E0
+!s105 shield_sv_unit
+S1
+R4
+Z36 w1650101527
+Z37 8D:/ABC/ABC/lab02/task2/shield.sv
+Z38 FD:/ABC/ABC/lab02/task2/shield.sv
+L0 7
+R8
+R9
+Z39 !s107 shield_states.sv|rooms.sv|D:/ABC/ABC/lab02/task2/shield.sv|
+Z40 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/ABC/ABC/lab02/task2/shield.sv|
+!i113 0
+R12
+R13
+Xshield_states
+R0
+V@T0@OJ>:DFJ0b6Kn@12Yo1
+r1
+!s85 0
+31
+!i10b 1
+!s100 _cfciggeZkPQ@iGJIgDR11
+I@T0@OJ>:DFJ0b6Kn@12Yo1
+S1
+R4
+w1650037549
+8shield_states.sv
+Z41 Fshield_states.sv
+L0 4
+R8
+R9
+R39
+R40
+!i113 0
+R12
+R13
+Xshield_sv_unit
+R0
+R1
+R35
+Vb6eZGF[_02Oj0XkX44;Ua0
+r1
+!s85 0
+31
+!i10b 1
+!s100 DEbCce[><3>[Rb7^0P;h`1
+Ib6eZGF[_02Oj0XkX44;Ua0
+!i103 1
+S1
+R4
+R36
+R37
+R38
+R15
+R41
+L0 4
+R8
+R9
+R39
+R40
+!i113 0
+R12
+R13
+vsword_state_machine
+R0
+R1
+Z42 DXx4 work 12 sword_states 0 22 dE9<H0J=SJ1VL1m<SQRXB3
+DXx4 work 13 sword_sv_unit 0 22 n1Zl?Adn?QihB=J;E>n8I2
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 a4VXC7E9L>Q=N;b0YhW_n1
+Ie<Z:6F4;VGB_<ZZ35mcIN2
+!s105 sword_sv_unit
+S1
+R4
+Z43 w1650104503
+Z44 8D:/ABC/ABC/lab02/task2/sword.sv
+Z45 FD:/ABC/ABC/lab02/task2/sword.sv
+L0 7
+R8
+R9
+R33
+R34
+!i113 0
+R12
+R13
+Xsword_states
+R0
+VdE9<H0J=SJ1VL1m<SQRXB3
+r1
+!s85 0
+31
+!i10b 1
+!s100 n=09ZQU6Lz6Pa_FEdQM:L0
+IdE9<H0J=SJ1VL1m<SQRXB3
+S1
+R4
+w1650037321
+8sword_states.sv
+Z46 Fsword_states.sv
+L0 4
+R8
+R9
+R33
+R34
+!i113 0
+R12
+R13
+Xsword_sv_unit
+R0
+R1
+R42
+Vn1Zl?Adn?QihB=J;E>n8I2
+r1
+!s85 0
+31
+!i10b 1
+!s100 `EV9kBbGHnbW]8?13neG^2
+In1Zl?Adn?QihB=J;E>n8I2
+!i103 1
+S1
+R4
+R43
+R44
+R45
+R15
+R46
+L0 4
+R8
+R9
+R33
+R34
+!i113 0
+R12
+R13
+vtestbench
+R0
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 O15l`HN19I]m6WiIRd_6S2
+I@9__ZPTEA^D8R0@ACS_>L1
+!s105 testbench_sv_unit
+S1
+R4
+w1650104812
+8D:/ABC/ABC/lab02/task2/testbench.sv
+FD:/ABC/ABC/lab02/task2/testbench.sv
+L0 1
+R8
+!s108 1650104915.000000
+!s107 D:/ABC/ABC/lab02/task2/testbench.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/ABC/ABC/lab02/task2/testbench.sv|
+!i113 0
+R12
+R13

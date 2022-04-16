@@ -1,0 +1,115 @@
+|lab02_task2
+clk => room_state_machine:r.clk
+clk => sword_state_machine:sw.clk
+clk => gold_state_machine:g.clk
+clk => shield_state_machine:sh.clk
+clk => amulet_state_machine:a.clk
+reset => room_state_machine:r.reset
+reset => sword_state_machine:sw.reset
+reset => gold_state_machine:g.reset
+reset => shield_state_machine:sh.reset
+reset => amulet_state_machine:a.reset
+n => room_state_machine:r.n
+s => room_state_machine:r.s
+e => room_state_machine:r.e
+w => room_state_machine:r.w
+win << Equal0.DB_MAX_OUTPUT_PORT_TYPE
+die << Equal1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02_task2|room_state_machine:r
+clk => current~1.DATAIN
+reset => current~3.DATAIN
+n => next.OUTPUTSELECT
+n => next.OUTPUTSELECT
+n => next.OUTPUTSELECT
+n => next.OUTPUTSELECT
+n => next.OUTPUTSELECT
+n => next.OUTPUTSELECT
+n => next.OUTPUTSELECT
+n => next.OUTPUTSELECT
+n => always1.IN0
+n => Selector1.IN3
+n => Selector3.IN3
+n => next.DATAA
+n => Selector4.IN4
+n => Selector6.IN2
+s => next.OUTPUTSELECT
+s => next.OUTPUTSELECT
+s => always1.IN1
+s => Selector0.IN4
+s => next.DATAA
+s => Selector2.IN5
+s => next.DATAA
+s => next.DATAA
+s => Selector3.IN1
+s => Selector1.IN1
+e => always1.IN1
+e => next.DATAA
+e => next.DATAA
+e => Selector4.IN5
+e => next.DATAA
+e => Selector5.IN1
+e => next.DATAA
+w => next.OUTPUTSELECT
+w => next.OUTPUTSELECT
+w => next.OUTPUTSELECT
+w => next.OUTPUTSELECT
+w => next.OUTPUTSELECT
+w => next.OUTPUTSELECT
+w => next.OUTPUTSELECT
+w => next.OUTPUTSELECT
+w => always1.IN1
+w => next.DATAA
+w => Selector5.IN3
+w => Selector4.IN6
+sword => always1.IN0
+shield => always1.IN1
+amulet => always1.IN1
+room[0] <= WideOr11.DB_MAX_OUTPUT_PORT_TYPE
+room[1] <= WideOr10.DB_MAX_OUTPUT_PORT_TYPE
+room[2] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+room[3] <= room.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02_task2|sword_state_machine:sw
+clk => current~1.DATAIN
+reset => current~3.DATAIN
+room[0] => Equal0.IN1
+room[1] => Equal0.IN3
+room[2] => Equal0.IN0
+room[3] => Equal0.IN2
+sword <= sword.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02_task2|gold_state_machine:g
+clk => current~1.DATAIN
+reset => current~3.DATAIN
+room[0] => Equal0.IN1
+room[1] => Equal0.IN0
+room[2] => Equal0.IN3
+room[3] => Equal0.IN2
+gold <= gold.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02_task2|shield_state_machine:sh
+clk => current~1.DATAIN
+reset => current~3.DATAIN
+room[0] => Equal0.IN3
+room[1] => Equal0.IN1
+room[2] => Equal0.IN0
+room[3] => Equal0.IN2
+gold => always1.IN1
+shield <= shield.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02_task2|amulet_state_machine:a
+clk => current~1.DATAIN
+reset => current~3.DATAIN
+room[0] => Equal0.IN0
+room[1] => Equal0.IN3
+room[2] => Equal0.IN2
+room[3] => Equal0.IN1
+amulet <= amulet.DB_MAX_OUTPUT_PORT_TYPE
+
+

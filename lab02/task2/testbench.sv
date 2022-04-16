@@ -1,0 +1,44 @@
+module testbench(); 
+	logic clk, reset;
+	logic n, s, e, w, win, die;
+	logic [1:0] expected;
+	logic [31:0] vectornum, errors;
+	logic [7:0] testvectors[10000:0];
+	logic r;
+	
+	lab02_task2 dut(clk, reset, n, s, e, w, win, die);
+	
+	always
+		begin
+			clk=1; #5; clk=0; #5; 
+		end
+		
+	initial
+		begin
+			$readmemb("game.tv", testvectors); 
+			vectornum = 0; errors = 0; reset = 1; #22; reset = 0; 
+		end
+		
+	always @(posedge clk) 
+		begin
+			#1; {r, n, s, e, w, expected} = testvectors[vectornum];
+			if(r)
+				begin
+					reset = 1; #22; reset = 0;
+				end
+		end
+		
+	always @(negedge clk) 
+		if (~reset) begin
+			if ({win, die} !== expected) begin
+				$display("Error: inputs = %b", {reset, n, s, e, w});
+				$display(" outputs = %b %b (%b expected)", win, die, expected); 
+				errors = errors + 1; 
+			end
+			vectornum = vectornum + 1;
+			if (testvectors[vectornum] === 8'bx) begin
+				$display("%d tests completed with %d errors", vectornum, errors); 
+				$stop; 
+			end
+		end
+endmodule

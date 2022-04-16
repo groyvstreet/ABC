@@ -1,0 +1,21 @@
+module amulet(input logic clk,
+				  input logic reset,
+				  input logic [3:0] room,
+				  output logic amulet);
+		
+	typedef enum logic [1:0] {A0, A1} amulet_state;
+	amulet_state current, next;
+	
+	always_ff @(posedge clk, posedge reset)
+		if(reset) current <= A0;
+		else current <= next;
+		
+	always_comb
+		case (current)
+			A0: if (room === 4'b0010) next = A1;
+				  else next = A0;
+			A1: next = A1;
+		endcase
+		
+	assign amulet = (current == SW1);
+endmodule

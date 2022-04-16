@@ -1,0 +1,76 @@
+D:/ABC/ABC/lab02/task2/gold.sv {1 {vlog -work work -vopt -sv -stats=none D:/ABC/ABC/lab02/task2/gold.sv
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling package rooms
+-- Compiling package gold_states
+-- Compiling package gold_sv_unit
+-- Importing package rooms
+-- Importing package gold_states
+-- Compiling module gold_state_machine
+
+Top level modules:
+	gold_state_machine
+
+} {} {}} D:/ABC/ABC/lab02/task2/sword.sv {1 {vlog -work work -vopt -sv -stats=none D:/ABC/ABC/lab02/task2/sword.sv
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling package rooms
+-- Compiling package sword_states
+-- Compiling package sword_sv_unit
+-- Importing package rooms
+-- Importing package sword_states
+-- Compiling module sword_state_machine
+
+Top level modules:
+	sword_state_machine
+
+} {} {}} D:/ABC/ABC/lab02/task2/amulet.sv {1 {vlog -work work -vopt -sv -stats=none D:/ABC/ABC/lab02/task2/amulet.sv
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling package rooms
+-- Compiling package amulet_states
+-- Compiling package amulet_sv_unit
+-- Importing package rooms
+-- Importing package amulet_states
+-- Compiling module amulet_state_machine
+
+Top level modules:
+	amulet_state_machine
+
+} {} {}} D:/ABC/ABC/lab02/task2/testbench.sv {1 {vlog -work work -vopt -sv -stats=none D:/ABC/ABC/lab02/task2/testbench.sv
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module testbench
+
+Top level modules:
+	testbench
+
+} {} {}} D:/ABC/ABC/lab02/task2/lab02_task2.sv {1 {vlog -work work -vopt -sv -stats=none D:/ABC/ABC/lab02/task2/lab02_task2.sv
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling package rooms
+-- Compiling package lab02_task2_sv_unit
+-- Importing package rooms
+-- Compiling module lab02_task2
+
+Top level modules:
+	lab02_task2
+
+} {} {}} D:/ABC/ABC/lab02/task2/shield.sv {1 {vlog -work work -vopt -sv -stats=none D:/ABC/ABC/lab02/task2/shield.sv
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling package rooms
+-- Compiling package shield_states
+-- Compiling package shield_sv_unit
+-- Importing package rooms
+-- Importing package shield_states
+-- Compiling module shield_state_machine
+
+Top level modules:
+	shield_state_machine
+
+} {} {}} D:/ABC/ABC/lab02/task2/room.sv {1 {vlog -work work -vopt -sv -stats=none D:/ABC/ABC/lab02/task2/room.sv
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling package rooms
+-- Compiling package room_sv_unit
+-- Importing package rooms
+-- Compiling module room_state_machine
+
+Top level modules:
+	room_state_machine
+
+} {} {}}
