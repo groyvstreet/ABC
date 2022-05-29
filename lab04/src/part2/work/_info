@@ -1,0 +1,220 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/Tools/ModelSim/examples
+valu_decoder
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 R>RQDGkAD7?nmnfB0ZVk:2
+IM7M8@]KISP>TLmS<6fc:N1
+Z2 !s105 alu_decoder_sv_unit
+S1
+Z3 dD:/ABC/ABC/lab04/src/part2
+w1653769223
+Z4 8D:/ABC/ABC/lab04/src/part2/alu_decoder.sv
+Z5 FD:/ABC/ABC/lab04/src/part2/alu_decoder.sv
+L0 1
+Z6 OL;L;10.6d;65
+Z7 !s108 1653771321.000000
+Z8 !s107 D:/ABC/ABC/lab04/src/part2/alu_decoder.sv|
+Z9 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/ABC/ABC/lab04/src/part2/alu_decoder.sv|
+!i113 0
+Z10 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z11 tCvgOpt 0
+vcontroller
+R0
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 0_Jmdh1:VDWA:AhoP>CK=3
+I54YfUX]GZE8eif@J8RUJg0
+!s105 controller_sv_unit
+S1
+R3
+w1653769238
+8D:/ABC/ABC/lab04/src/part2/controller.sv
+FD:/ABC/ABC/lab04/src/part2/controller.sv
+L0 1
+R6
+R7
+!s107 D:/ABC/ABC/lab04/src/part2/controller.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/ABC/ABC/lab04/src/part2/controller.sv|
+!i113 0
+R10
+R11
+Xcontroller_testbench_sv_unit
+R0
+V5^g_2l:j:c@?P8W`_Ymm72
+r1
+!s85 0
+31
+!i10b 1
+!s100 C`e7=[O?_i4^A[^ee_c[^0
+I5^g_2l:j:c@?P8W`_Ymm72
+!i103 1
+S1
+R3
+Z12 w1653769055
+Z13 8D:/ABC/ABC/lab04/src/part2/controller_testbench.sv
+Z14 FD:/ABC/ABC/lab04/src/part2/controller_testbench.sv
+L0 11
+R6
+R7
+Z15 !s107 D:/ABC/ABC/lab04/src/part2/controller_testbench.sv|
+Z16 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/ABC/ABC/lab04/src/part2/controller_testbench.sv|
+!i113 0
+R10
+R11
+vdecoder_alu
+R0
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 C<8@4<6;G4lHa2id[aGZA3
+InWAM2X9bPDV?IPASmL2<i3
+R2
+S1
+R3
+w1653768215
+R4
+R5
+L0 1
+R6
+!s108 1653769077.000000
+R8
+R9
+!i113 0
+R10
+R11
+vinstruction_decoder
+R0
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 TDEHcL;`FQnZWaWBWVWWG1
+I0O9;KzfoAE9VnRHFVRlD[1
+!s105 instruction_decoder_sv_unit
+S1
+R3
+w1653768236
+8D:/ABC/ABC/lab04/src/part2/instruction_decoder.sv
+FD:/ABC/ABC/lab04/src/part2/instruction_decoder.sv
+L0 1
+R6
+R7
+!s107 D:/ABC/ABC/lab04/src/part2/instruction_decoder.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/ABC/ABC/lab04/src/part2/instruction_decoder.sv|
+!i113 0
+R10
+R11
+vmain_state_machine
+R0
+Z17 DXx4 work 6 states 0 22 ?UML6WGND`QNJ2]LNbWn]0
+DXx4 work 26 main_state_machine_sv_unit 0 22 OdOlUI2eJbD?I@b?CEbW[1
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 OU3gaMTGkPWd9daEzf1Nl0
+IUi5h:RMHNHO]PZK]>@`ba0
+!s105 main_state_machine_sv_unit
+S1
+R3
+Z18 w1653771162
+Z19 8D:/ABC/ABC/lab04/src/part2/main_state_machine.sv
+Z20 FD:/ABC/ABC/lab04/src/part2/main_state_machine.sv
+L0 3
+R6
+R7
+Z21 !s107 D:/ABC/ABC/lab04/src/part2/main_state_machine.sv|
+Z22 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/ABC/ABC/lab04/src/part2/main_state_machine.sv|
+!i113 0
+R10
+R11
+Xmain_state_machine_sv_unit
+R0
+R17
+VOdOlUI2eJbD?I@b?CEbW[1
+r1
+!s85 0
+31
+!i10b 1
+!s100 g`GJRcUnk5HPmc93m3MND2
+IOdOlUI2eJbD?I@b?CEbW[1
+!i103 1
+S1
+R3
+R18
+R19
+R20
+L0 1
+R6
+R7
+R21
+R22
+!i113 0
+R10
+R11
+Xstates
+R0
+V?UML6WGND`QNJ2]LNbWn]0
+r1
+!s85 0
+31
+!i10b 1
+!s100 Ki?2?NfUF4ZOWgaWCM`d20
+I?UML6WGND`QNJ2]LNbWn]0
+S1
+R3
+w1653771171
+8D:/ABC/ABC/lab04/src/part2/states.sv
+FD:/ABC/ABC/lab04/src/part2/states.sv
+L0 1
+R6
+R7
+!s107 D:/ABC/ABC/lab04/src/part2/states.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/ABC/ABC/lab04/src/part2/states.sv|
+!i113 0
+R10
+R11
+vtestbench
+R0
+DXx4 work 28 controller_testbench_sv_unit 0 22 5^g_2l:j:c@?P8W`_Ymm72
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 bAcAAD`3158<UcH_R`QM11
+IPfoClaGCfLLG]QH>81lUc0
+!s105 controller_testbench_sv_unit
+S1
+R3
+R12
+R13
+R14
+L0 13
+R6
+R7
+R15
+R16
+!i113 0
+R10
+R11

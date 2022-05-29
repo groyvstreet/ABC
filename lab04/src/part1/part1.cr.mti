@@ -1,0 +1,23 @@
+D:/ABC/ABC/lab04/src/riscvsingle.sv {1 {vlog -work work -vopt -sv -stats=none D:/ABC/ABC/lab04/src/riscvsingle.sv
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module testbench
+-- Compiling module top
+-- Compiling module riscvsingle
+-- Compiling module controller
+-- Compiling module maindec
+-- Compiling module aludec
+-- Compiling module datapath
+-- Compiling module regfile
+-- Compiling module adder
+-- Compiling module extend
+-- Compiling module flopr
+-- Compiling module mux2
+-- Compiling module mux3
+-- Compiling module imem
+-- Compiling module dmem
+-- Compiling module alu
+
+Top level modules:
+	testbench
+
+} {} {}}

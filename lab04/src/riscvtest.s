@@ -5,7 +5,7 @@
 #
 # Test the RISC-V processor.  
 #  add, sub, and, or, slt, addi, lw, sw, beq, jal
-# If successful, it should write the value 25 to address 100
+# If successful, it should write the value 128 to address 100
 
 #       RISC-V Assembly         Description               Address   Machine Code
 main:   addi x2, x0, 5          # x2 = 5                  0         00500113   
@@ -27,7 +27,9 @@ around: slt  x4, x7, x2         # x4 = (3 < 5)  = 1       28        0023A233
         jal  x3, end            # jump to end, x3 = 0x44  40        008001EF
         addi x2, x0, 1          # shouldn't happen        44        00100113
 end:    add  x2, x2, x9         # x2 = (7 + 18)  = 25     48        00910133
-        sw   x2, 0x20(x3)       # mem[100] = 25           4C        0221A023 
-done:   beq  x2, x2, done       # infinite loop           50        00210063
-		
-		
+        addi x2, x2, 103        # x2 = (25 + 103) = 128   4C        06710113
+        sw   x2, 0x20(x3)       # mem[100] = 128          50        0221A023
+        lb   x2, 0x20(x3)       # x2 = -128               54        02018103
+        addi x2, x2, 256        # x2 = (-128 + 256) = 128 58        10010113
+        sw   x2, 0x20(x3)       # mem[100] = 128          5C        0221A023
+done:   beq  x2, x2, done       # infinite loop           60        00210063

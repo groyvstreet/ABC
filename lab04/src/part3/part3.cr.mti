@@ -1,0 +1,101 @@
+D:/ABC/ABC/lab04/src/part3/main_state_machine.sv {1 {vlog -work work -vopt -sv -stats=none D:/ABC/ABC/lab04/src/part3/main_state_machine.sv
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module main_state_machine
+
+Top level modules:
+	main_state_machine
+
+} {} {}} D:/ABC/ABC/lab04/src/part3/alu.sv {1 {vlog -work work -vopt -sv -stats=none D:/ABC/ABC/lab04/src/part3/alu.sv
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}} D:/ABC/ABC/lab04/src/part3/top.sv {1 {vlog -work work -vopt -sv -stats=none D:/ABC/ABC/lab04/src/part3/top.sv
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module top
+-- Compiling module mem
+-- Compiling module riscvmulti
+
+Top level modules:
+	top
+
+} {} {}} D:/ABC/ABC/lab04/src/part3/mux3.sv {1 {vlog -work work -vopt -sv -stats=none D:/ABC/ABC/lab04/src/part3/mux3.sv
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module mux3
+
+Top level modules:
+	mux3
+
+} {} {}} D:/ABC/ABC/lab04/src/part3/riscv_testbench.sv {1 {vlog -work work -vopt -sv -stats=none D:/ABC/ABC/lab04/src/part3/riscv_testbench.sv
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module testbench
+
+Top level modules:
+	testbench
+
+} {} {}} D:/ABC/ABC/lab04/src/part3/flopenr.sv {1 {vlog -work work -vopt -sv -stats=none D:/ABC/ABC/lab04/src/part3/flopenr.sv
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module flopenr
+
+Top level modules:
+	flopenr
+
+} {} {}} D:/ABC/ABC/lab04/src/part3/regfile.sv {1 {vlog -work work -vopt -sv -stats=none D:/ABC/ABC/lab04/src/part3/regfile.sv
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module regfile
+
+Top level modules:
+	regfile
+
+} {} {}} D:/ABC/ABC/lab04/src/part3/adder.sv {1 {vlog -work work -vopt -sv -stats=none D:/ABC/ABC/lab04/src/part3/adder.sv
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module adder
+
+Top level modules:
+	adder
+
+} {} {}} D:/ABC/ABC/lab04/src/part3/extend.sv {1 {vlog -work work -vopt -sv -stats=none D:/ABC/ABC/lab04/src/part3/extend.sv
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module extend
+
+Top level modules:
+	extend
+
+} {} {}} D:/ABC/ABC/lab04/src/part3/flopr.sv {1 {vlog -work work -vopt -sv -stats=none D:/ABC/ABC/lab04/src/part3/flopr.sv
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module flopr
+
+Top level modules:
+	flopr
+
+} {} {}} D:/ABC/ABC/lab04/src/part3/controller.sv {1 {vlog -work work -vopt -sv -stats=none D:/ABC/ABC/lab04/src/part3/controller.sv
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module controller
+
+Top level modules:
+	controller
+
+} {} {}} D:/ABC/ABC/lab04/src/part3/mux2.sv {1 {vlog -work work -vopt -sv -stats=none D:/ABC/ABC/lab04/src/part3/mux2.sv
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module mux2
+
+Top level modules:
+	mux2
+
+} {} {}} D:/ABC/ABC/lab04/src/part3/alu_decoder.sv {1 {vlog -work work -vopt -sv -stats=none D:/ABC/ABC/lab04/src/part3/alu_decoder.sv
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module alu_decoder
+
+Top level modules:
+	alu_decoder
+
+} {} {}} D:/ABC/ABC/lab04/src/part3/instruction_decoder.sv {1 {vlog -work work -vopt -sv -stats=none D:/ABC/ABC/lab04/src/part3/instruction_decoder.sv
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module instruction_decoder
+
+Top level modules:
+	instruction_decoder
+
+} {} {}}

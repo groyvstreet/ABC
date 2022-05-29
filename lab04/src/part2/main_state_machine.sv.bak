@@ -1,0 +1,63 @@
+module main_state_machine(input logic clk,
+								  input logic reset,
+								  input logic [6:0] op,
+								  output logic branch,
+								  output logic pcupdate,
+								  output logic regwrite,
+								  output logic memwrite,
+								  output logic irwrite,
+								  output logic [1:0] resultsrc,
+								  output logic [1:0] alusrcb,
+								  output logic [1:0] alusrca,
+								  output logic adrsrc,
+								  output logic [1:0] aluop);
+	typedef enum logic [13:0] {
+		FETCH  	= 14'b00_10_10_0_1_0_0_00_0_1,
+		DECODE 	= 14'b01_01_00_0_0_0_0_00_0_0,
+		MEMADR 	= 14'b10_01_00_0_0_0_0_00_0_0,
+		EXECUTER = 14'b10_00_00_0_0_0_0_10_0_0,
+		EXECUTEI = 14'b10_01_00_0_0_0_0_10_0_0,
+		JAL 		= 14'b01_10_00_0_0_0_0_00_0_1,
+		BEQ		= 14'b10_00_00_0_0_0_0_01_1_0,
+		MEMREAD  = 14'b00_00_00_1_0_0_0_00_0_0,
+		MEMWRITE = 14'b00_00_00_1_0_0_1_00_0_0,
+		ALUWB		= 14'b00_00_00_0_0_1_0_00_0_0,
+		MEMWB		= 14'b00_00_01_0_0_1_0_00_0_0,
+		UNKNOWN  = 14'bxx_xx_xx_x_x_x_x_xx_x_x	// non-implemented state
+	} my_state;
+	logic [13:0] current;
+	my_state next;
+	always_ff @(posedge clk,
+					posedge reset)
+		if (reset) current <= FETCH;
+		else current <= next;
+	
+	always_comb 
+		case (current)
+			FETCH: next = DECODE;
+			DECODE: case (op)
+						7'b0000011: next = MEMADR;
+						7'b0100011: next = MEMADR;
+						7'b0110011: next = EXECUTER;
+						7'b0010011: next = EXECUTEI;
+						7'b1101111: next = JAL;
+						7'b1100011: next = BEQ;
+						default:		next = UNKNOWN;
+					  endcase
+			MEMADR: case (op)
+						7'b0000011: next = MEMREAD;
+						7'b0100011: next = MEMWRITE;
+						default:		next = UNKNOWN;
+					  endcase
+			EXECUTER: next = ALUWB;
+			EXECUTEI: next = ALUWB;
+			JAL:		 next = ALUWB;
+			BEQ:		 next = FETCH;
+			MEMREAD:  next = MEMWB;
+			MEMWRITE: next = FETCH;
+			ALUWB: 	 next = FETCH;
+			MEMWB:	 next = FETCH;
+			default:  next = UNKNOWN;
+		endcase
+	assign {alusrca, alusrcb, resultsrc, adrsrc, irwrite, regwrite, memwrite, aluop, branch, pcupdate} = current;
+endmodule

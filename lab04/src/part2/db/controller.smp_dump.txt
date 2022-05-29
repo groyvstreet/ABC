@@ -1,0 +1,14 @@
+
+State Machine - |controller|main_state_machine:msm|current
+Name current.MEMREAD current.JAL current.ALUWB current.EXECUTEL current.MEMADR current.DECODE current.EXECUTER current.MEMWRITE current.FETCH current.MEMWB current.BEQ 
+current.FETCH 0 0 0 0 0 0 0 0 0 0 0 
+current.EXECUTER 0 0 0 0 0 0 1 0 1 0 0 
+current.DECODE 0 0 0 0 0 1 0 0 1 0 0 
+current.MEMADR 0 0 0 0 1 0 0 0 1 0 0 
+current.EXECUTEL 0 0 0 1 0 0 0 0 1 0 0 
+current.MEMWRITE 0 0 0 0 0 0 0 1 1 0 0 
+current.ALUWB 0 0 1 0 0 0 0 0 1 0 0 
+current.MEMWB 0 0 0 0 0 0 0 0 1 1 0 
+current.JAL 0 1 0 0 0 0 0 0 1 0 0 
+current.MEMREAD 1 0 0 0 0 0 0 0 1 0 0 
+current.BEQ 0 0 0 0 0 0 0 0 1 0 1 
