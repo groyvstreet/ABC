@@ -1,2 +1,3 @@
-Warning (10273): Verilog HDL warning at riscvsingle.sv(302): extended using "x" or "z" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 302
-Warning (10273): Verilog HDL warning at riscvsingle.sv(379): extended using "x" or "z" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 379
+Warning (10273): Verilog HDL warning at riscvsingle.sv(308): extended using "x" or "z" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 308
+Warning (10273): Verilog HDL warning at riscvsingle.sv(319): extended using "x" or "z" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 319
+Warning (10273): Verilog HDL warning at riscvsingle.sv(396): extended using "x" or "z" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 396

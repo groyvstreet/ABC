@@ -1,5 +1,5 @@
 Analysis & Synthesis report for riscvsingle
-Sat May 28 14:54:45 2022
+Sat Jun  4 18:20:31 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -18,13 +18,14 @@ Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
  10. Parameter Settings for User Entity Instance: datapath:dp|flopr:pcreg
  11. Parameter Settings for User Entity Instance: datapath:dp|mux2:pcmux
  12. Parameter Settings for User Entity Instance: datapath:dp|mux2:srcbmux
- 13. Parameter Settings for User Entity Instance: datapath:dp|mux3:resultmux
- 14. Port Connectivity Checks: "datapath:dp|adder:pcadd4"
- 15. Port Connectivity Checks: "controller:c"
- 16. Post-Synthesis Netlist Statistics for Top Partition
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
- 19. Analysis & Synthesis Suppressed Messages
+ 13. Parameter Settings for User Entity Instance: datapath:dp|mux2:lbmux
+ 14. Parameter Settings for User Entity Instance: datapath:dp|mux3:resultmux
+ 15. Port Connectivity Checks: "datapath:dp|adder:pcadd4"
+ 16. Port Connectivity Checks: "controller:c"
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
+ 20. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -51,7 +52,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat May 28 14:54:45 2022       ;
+; Analysis & Synthesis Status     ; Successful - Sat Jun  4 18:20:31 2022       ;
 ; Quartus Prime Version           ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                   ; riscvsingle                                 ;
 ; Top-level Entity Name           ; riscvsingle                                 ;
@@ -198,11 +199,11 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Estimate of Logic utilization (ALMs needed) ; 1244      ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 1160      ;
+; Combinational ALUT usage for logic          ; 1158      ;
 ;     -- 7 input functions                    ; 524       ;
-;     -- 6 input functions                    ; 238       ;
-;     -- 5 input functions                    ; 97        ;
-;     -- 4 input functions                    ; 126       ;
+;     -- 6 input functions                    ; 240       ;
+;     -- 5 input functions                    ; 96        ;
+;     -- 4 input functions                    ; 123       ;
 ;     -- <=3 input functions                  ; 175       ;
 ;                                             ;           ;
 ; Dedicated logic registers                   ; 1056      ;
@@ -213,7 +214,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 1056      ;
-; Total fan-out                               ; 10030     ;
+; Total fan-out                               ; 10025     ;
 ; Average fan-out                             ; 3.95      ;
 +---------------------------------------------+-----------+
 
@@ -223,18 +224,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                        ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+-------------+--------------+
-; |riscvsingle               ; 1160 (0)            ; 1056 (0)                  ; 0                 ; 0          ; 163  ; 0            ; |riscvsingle                               ; riscvsingle ; work         ;
-;    |controller:c|          ; 32 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |riscvsingle|controller:c                  ; controller  ; work         ;
+; |riscvsingle               ; 1158 (0)            ; 1056 (0)                  ; 0                 ; 0          ; 163  ; 0            ; |riscvsingle                               ; riscvsingle ; work         ;
+;    |controller:c|          ; 31 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |riscvsingle|controller:c                  ; controller  ; work         ;
 ;       |aludec:ad|          ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |riscvsingle|controller:c|aludec:ad        ; aludec      ; work         ;
 ;       |maindec:md|         ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |riscvsingle|controller:c|maindec:md       ; maindec     ; work         ;
-;    |datapath:dp|           ; 1128 (0)            ; 1056 (0)                  ; 0                 ; 0          ; 0    ; 0            ; |riscvsingle|datapath:dp                   ; datapath    ; work         ;
+;    |datapath:dp|           ; 1127 (0)            ; 1056 (0)                  ; 0                 ; 0          ; 0    ; 0            ; |riscvsingle|datapath:dp                   ; datapath    ; work         ;
 ;       |adder:pcadd4|       ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |riscvsingle|datapath:dp|adder:pcadd4      ; adder       ; work         ;
 ;       |adder:pcaddbranch|  ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |riscvsingle|datapath:dp|adder:pcaddbranch ; adder       ; work         ;
-;       |alu:alu|            ; 314 (314)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |riscvsingle|datapath:dp|alu:alu           ; alu         ; work         ;
+;       |alu:alu|            ; 312 (312)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |riscvsingle|datapath:dp|alu:alu           ; alu         ; work         ;
 ;       |extend:ext|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |riscvsingle|datapath:dp|extend:ext        ; extend      ; work         ;
 ;       |flopr:pcreg|        ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |riscvsingle|datapath:dp|flopr:pcreg       ; flopr       ; work         ;
 ;       |mux2:srcbmux|       ; 37 (37)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |riscvsingle|datapath:dp|mux2:srcbmux      ; mux2        ; work         ;
-;       |mux3:resultmux|     ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |riscvsingle|datapath:dp|mux3:resultmux    ; mux3        ; work         ;
+;       |mux3:resultmux|     ; 33 (33)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |riscvsingle|datapath:dp|mux3:resultmux    ; mux3        ; work         ;
 ;       |regfile:rf|         ; 682 (682)           ; 1024 (1024)               ; 0                 ; 0          ; 0    ; 0            ; |riscvsingle|datapath:dp|regfile:rf        ; regfile     ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -260,16 +261,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |riscvsingle|datapath:dp|mux3:resultmux|y[19] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |riscvsingle|datapath:dp|alu:alu|ShiftRight0  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |riscvsingle|datapath:dp|mux3:resultmux|y[2]  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |riscvsingle|datapath:dp|alu:alu|ShiftLeft0   ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |riscvsingle|datapath:dp|alu:alu|ShiftLeft0   ;
 ; 4:1                ; 50 bits   ; 100 LEs       ; 100 LEs              ; 0 LEs                  ; No         ; |riscvsingle|datapath:dp|alu:alu|ShiftLeft0   ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |riscvsingle|datapath:dp|alu:alu|ShiftRight0  ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |riscvsingle|datapath:dp|alu:alu|ShiftLeft0   ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |riscvsingle|datapath:dp|alu:alu|ShiftRight0  ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |riscvsingle|datapath:dp|alu:alu|ShiftRight0  ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |riscvsingle|datapath:dp|alu:alu|ShiftLeft0   ;
+; 4:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |riscvsingle|datapath:dp|mux3:resultmux|y[17] ;
 ; 13:1               ; 12 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; No         ; |riscvsingle|datapath:dp|alu:alu|Mux5         ;
 ; 13:1               ; 12 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; No         ; |riscvsingle|datapath:dp|alu:alu|Mux17        ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |riscvsingle|datapath:dp|alu:alu|Mux2         ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |riscvsingle|datapath:dp|alu:alu|Mux0         ;
 ; 16:1               ; 3 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |riscvsingle|datapath:dp|alu:alu|Mux28        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
 
@@ -301,6 +303,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------------+
 ; WIDTH          ; 32    ; Signed Integer                               ;
 +----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|mux2:lbmux ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -343,25 +355,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     CLR SLD           ; 30                          ;
 ;     ENA               ; 1024                        ;
 ;     ENA CLR           ; 2                           ;
-; arriav_lcell_comb     ; 1160                        ;
+; arriav_lcell_comb     ; 1158                        ;
 ;     arith             ; 62                          ;
 ;         1 data inputs ; 30                          ;
 ;         2 data inputs ; 18                          ;
 ;         5 data inputs ; 14                          ;
 ;     extend            ; 524                         ;
 ;         7 data inputs ; 524                         ;
-;     normal            ; 542                         ;
+;     normal            ; 540                         ;
 ;         2 data inputs ; 83                          ;
 ;         3 data inputs ; 44                          ;
-;         4 data inputs ; 94                          ;
-;         5 data inputs ; 83                          ;
-;         6 data inputs ; 238                         ;
+;         4 data inputs ; 91                          ;
+;         5 data inputs ; 82                          ;
+;         6 data inputs ; 240                         ;
 ;     shared            ; 32                          ;
 ;         4 data inputs ; 32                          ;
 ; boundary_port         ; 163                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 12.00                       ;
-; Average LUT depth     ; 10.28                       ;
+; Average LUT depth     ; 10.35                       ;
 +-----------------------+-----------------------------+
 
 
@@ -370,7 +382,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -380,56 +392,83 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Sat May 28 14:54:23 2022
+    Info: Processing started: Sat Jun  4 18:20:15 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off riscvsingle -c riscvsingle
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
-Info (12021): Found 16 design units, including 16 entities, in source file /abc/abc/lab04/src/riscvsingle.sv
+Info (12021): Found 17 design units, including 17 entities, in source file /abc/abc/lab04/src/riscvsingle.sv
     Info (12023): Found entity 1: testbench File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 81
     Info (12023): Found entity 2: top File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 119
     Info (12023): Found entity 3: riscvsingle File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 132
     Info (12023): Found entity 4: controller File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 154
-    Info (12023): Found entity 5: maindec File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 175
-    Info (12023): Found entity 6: aludec File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 201
-    Info (12023): Found entity 7: datapath File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 228
-    Info (12023): Found entity 8: regfile File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 262
-    Info (12023): Found entity 9: adder File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 282
-    Info (12023): Found entity 10: extend File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 288
-    Info (12023): Found entity 11: flopr File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 306
-    Info (12023): Found entity 12: mux2 File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 316
-    Info (12023): Found entity 13: mux3 File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 324
-    Info (12023): Found entity 14: imem File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 332
-    Info (12023): Found entity 15: dmem File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 343
-    Info (12023): Found entity 16: alu File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 355
+    Info (12023): Found entity 5: maindec File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 177
+    Info (12023): Found entity 6: aludec File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 203
+    Info (12023): Found entity 7: datapath File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 230
+    Info (12023): Found entity 8: regfile File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 268
+    Info (12023): Found entity 9: adder File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 288
+    Info (12023): Found entity 10: extend File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 294
+    Info (12023): Found entity 11: extend_byte File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 312
+    Info (12023): Found entity 12: flopr File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 323
+    Info (12023): Found entity 13: mux2 File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 333
+    Info (12023): Found entity 14: mux3 File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 341
+    Info (12023): Found entity 15: imem File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 349
+    Info (12023): Found entity 16: dmem File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 360
+    Info (12023): Found entity 17: alu File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 372
 Warning (10236): Verilog HDL Implicit Net warning at riscvsingle.sv(144): created implicit net for "PCSrc" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 144
+Warning (10236): Verilog HDL Implicit Net warning at riscvsingle.sv(145): created implicit net for "LoadByte" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 145
 Info (12127): Elaborating entity "riscvsingle" for the top level hierarchy
 Info (12128): Elaborating entity "controller" for hierarchy "controller:c" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 146
-Info (12128): Elaborating entity "maindec" for hierarchy "controller:c|maindec:md" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 169
-Info (12128): Elaborating entity "aludec" for hierarchy "controller:c|aludec:ad" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 170
-Warning (10272): Verilog HDL Case Statement warning at riscvsingle.sv(222): case item expression covers a value already covered by a previous case item File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 222
+Info (12128): Elaborating entity "maindec" for hierarchy "controller:c|maindec:md" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 170
+Info (12128): Elaborating entity "aludec" for hierarchy "controller:c|aludec:ad" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 171
 Info (12128): Elaborating entity "datapath" for hierarchy "datapath:dp" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 151
-Info (12128): Elaborating entity "flopr" for hierarchy "datapath:dp|flopr:pcreg" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 246
-Info (12128): Elaborating entity "adder" for hierarchy "datapath:dp|adder:pcadd4" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 247
-Info (12128): Elaborating entity "mux2" for hierarchy "datapath:dp|mux2:pcmux" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 249
-Info (12128): Elaborating entity "regfile" for hierarchy "datapath:dp|regfile:rf" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 253
-Info (12128): Elaborating entity "extend" for hierarchy "datapath:dp|extend:ext" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 254
-Info (12128): Elaborating entity "alu" for hierarchy "datapath:dp|alu:alu" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 258
-Info (12128): Elaborating entity "mux3" for hierarchy "datapath:dp|mux3:resultmux" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 259
+Info (12128): Elaborating entity "flopr" for hierarchy "datapath:dp|flopr:pcreg" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 250
+Info (12128): Elaborating entity "adder" for hierarchy "datapath:dp|adder:pcadd4" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 251
+Info (12128): Elaborating entity "mux2" for hierarchy "datapath:dp|mux2:pcmux" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 253
+Info (12128): Elaborating entity "regfile" for hierarchy "datapath:dp|regfile:rf" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 257
+Info (12128): Elaborating entity "extend" for hierarchy "datapath:dp|extend:ext" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 258
+Info (12128): Elaborating entity "alu" for hierarchy "datapath:dp|alu:alu" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 262
+Info (12128): Elaborating entity "extend_byte" for hierarchy "datapath:dp|extend_byte:extbyte" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 263
+Info (12128): Elaborating entity "mux3" for hierarchy "datapath:dp|mux3:resultmux" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 265
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "datapath:dp|regfile:rf|rf" is uninferred due to asynchronous read logic File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 268
+    Info (276007): RAM logic "datapath:dp|regfile:rf|rf" is uninferred due to asynchronous read logic File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 274
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file D:/ABC/ABC/lab04/src/part1/output_files/riscvsingle.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2347 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 24 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "ReadData[8]" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 137
+    Warning (15610): No output dependent on input pin "ReadData[9]" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 137
+    Warning (15610): No output dependent on input pin "ReadData[10]" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 137
+    Warning (15610): No output dependent on input pin "ReadData[11]" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 137
+    Warning (15610): No output dependent on input pin "ReadData[12]" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 137
+    Warning (15610): No output dependent on input pin "ReadData[13]" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 137
+    Warning (15610): No output dependent on input pin "ReadData[14]" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 137
+    Warning (15610): No output dependent on input pin "ReadData[15]" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 137
+    Warning (15610): No output dependent on input pin "ReadData[16]" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 137
+    Warning (15610): No output dependent on input pin "ReadData[17]" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 137
+    Warning (15610): No output dependent on input pin "ReadData[18]" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 137
+    Warning (15610): No output dependent on input pin "ReadData[19]" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 137
+    Warning (15610): No output dependent on input pin "ReadData[20]" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 137
+    Warning (15610): No output dependent on input pin "ReadData[21]" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 137
+    Warning (15610): No output dependent on input pin "ReadData[22]" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 137
+    Warning (15610): No output dependent on input pin "ReadData[23]" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 137
+    Warning (15610): No output dependent on input pin "ReadData[24]" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 137
+    Warning (15610): No output dependent on input pin "ReadData[25]" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 137
+    Warning (15610): No output dependent on input pin "ReadData[26]" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 137
+    Warning (15610): No output dependent on input pin "ReadData[27]" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 137
+    Warning (15610): No output dependent on input pin "ReadData[28]" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 137
+    Warning (15610): No output dependent on input pin "ReadData[29]" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 137
+    Warning (15610): No output dependent on input pin "ReadData[30]" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 137
+    Warning (15610): No output dependent on input pin "ReadData[31]" File: D:/ABC/ABC/lab04/src/riscvsingle.sv Line: 137
+Info (21057): Implemented 2345 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 66 input pins
     Info (21059): Implemented 97 output pins
-    Info (21061): Implemented 2184 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4889 megabytes
-    Info: Processing ended: Sat May 28 14:54:45 2022
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:29
+    Info (21061): Implemented 2182 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 4936 megabytes
+    Info: Processing ended: Sat Jun  4 18:20:31 2022
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:30
 
 
 +------------------------------------------+

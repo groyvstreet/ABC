@@ -142,10 +142,10 @@ module riscvsingle(input  logic        clk, reset,
 
   controller c(Instr[6:0], Instr[14:12], Instr[30], Zero,
                ResultSrc, MemWrite, PCSrc,
-               ALUSrc, RegWrite, Jump,
+               ALUSrc, RegWrite, Jump, LoadByte,
                ImmSrc, ALUControl);
   datapath dp(clk, reset, ResultSrc, PCSrc,
-              ALUSrc, RegWrite,
+              ALUSrc, RegWrite, LoadByte,
               ImmSrc, ALUControl,
               Zero, PC, Instr,
               ALUResult, WriteData, ReadData);
@@ -159,6 +159,7 @@ module controller(input  logic [6:0] op,
                   output logic       MemWrite,
                   output logic       PCSrc, ALUSrc,
                   output logic       RegWrite, Jump,
+                  output logic       LoadByte,
                   output logic [1:0] ImmSrc,
                   output logic [2:0] ALUControl);
 
@@ -169,6 +170,7 @@ module controller(input  logic [6:0] op,
              ALUSrc, RegWrite, Jump, ImmSrc, ALUOp);
   aludec  ad(op[5], funct3, funct7b5, ALUOp, ALUControl);
 
+  assign LoadByte = !((op ^ 7'b0000011) & (funct3 ^ 3'b000));
   assign PCSrc = Branch & Zero | Jump;
 endmodule
 
@@ -219,7 +221,7 @@ module aludec(input  logic       opb5,
                  3'b010:    ALUControl = 3'b101; // slt, slti
                  3'b110:    ALUControl = 3'b011; // or, ori
                  3'b111:    ALUControl = 3'b010; // and, andi
-                 3'b000:    ALUControl = 3'b000; // lb
+                 // 3'b000:    ALUControl = 3'b000; // lb
                  default:   ALUControl = 3'bxxx; // ???
                endcase
     endcase
@@ -228,7 +230,7 @@ endmodule
 module datapath(input  logic        clk, reset,
                 input  logic [1:0]  ResultSrc, 
                 input  logic        PCSrc, ALUSrc,
-                input  logic        RegWrite,
+                input  logic        RegWrite, LoadByte,
                 input  logic [1:0]  ImmSrc,
                 input  logic [2:0]  ALUControl,
                 output logic        Zero,
@@ -239,6 +241,8 @@ module datapath(input  logic        clk, reset,
 
   logic [31:0] PCNext, PCPlus4, PCTarget;
   logic [31:0] ImmExt;
+  logic [31:0] LbExt;
+  logic [31:0] ResReadData;
   logic [31:0] SrcA, SrcB;
   logic [31:0] Result;
 
@@ -256,7 +260,9 @@ module datapath(input  logic        clk, reset,
   // ALU logic
   mux2 #(32)  srcbmux(WriteData, ImmExt, ALUSrc, SrcB);
   alu         alu(SrcA, SrcB, ALUControl, ALUResult, Zero);
-  mux3 #(32)  resultmux(ALUResult, ReadData, PCPlus4, ResultSrc, Result);
+  extend_byte extbyte(ReadData, LbExt); // added
+  mux2 #(32)  lbmux(ReadData, LbExt, LoadByte, ResReadData); // added
+  mux3 #(32)  resultmux(ALUResult, ResReadData, PCPlus4, ResultSrc, Result);
 endmodule
 
 module regfile(input  logic        clk, 
@@ -301,6 +307,17 @@ module extend(input  logic [31:7] instr,
       2'b11:   immext = {{12{instr[31]}}, instr[19:12], instr[20], instr[30:21], 1'b0}; 
       default: immext = 32'bx; // undefined
     endcase             
+endmodule
+
+module extend_byte(input logic [31:0] init_byte, output logic [31:0] extended_byte);
+    always_comb
+      case(init_byte[7])
+               // positive
+      1'b0:    extended_byte = {{24{1'b0}}, init_byte[7:0]};
+               // negative
+      1'b1:    extended_byte = {{24{1'b1}}, init_byte[7:0]};
+      default: extended_byte = 32'bx; // undefined
+    endcase  
 endmodule
 
 module flopr #(parameter WIDTH = 8)
